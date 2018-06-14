@@ -43,11 +43,11 @@ export default {
   },
   mounted () {
     axios.all([
-      axios.get('http://localhost:4000/api/gits?language=elixir'),
-      axios.get('http://localhost:4000/api/gits?language=java'),
-      axios.get('http://localhost:4000/api/gits?language=ruby'),
-      axios.get('http://localhost:4000/api/gits?language=lua'),
-      axios.get('http://localhost:4000/api/gits?language=python')
+      axios.get('https://warm-woodland-36198.herokuapp.com/api/gits?language=elixir'),
+      axios.get('https://warm-woodland-36198.herokuapp.com/api/gits?language=java'),
+      axios.get('https://warm-woodland-36198.herokuapp.com/api/gits?language=ruby'),
+      axios.get('https://warm-woodland-36198.herokuapp.com/api/gits?language=lua'),
+      axios.get('https://warm-woodland-36198.herokuapp.com/api/gits?language=python')
     ]).then(axios.spread((elixir, java, ruby, lua, python) => {
       this.data = elixir.data.concat(java.data)
       this.data = this.data.concat(ruby.data)
